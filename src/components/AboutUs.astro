@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import Alcaparros from "../assets/clients/alcaparros.webp";
+import Andino from "../assets/clients/andino.svg";
+import Colina from "../assets/clients/colina.webp";
+import GimnasioNorte from "../assets/clients/gimnasio_norte.webp";
+import SanFelipe from "../assets/clients/san_felipe.webp";
+---
+
+<section class="about" id="nosotros">
+  <div class="container">
+    <div class="column">
+      <h2 class="title-40 text-color-white">Nosotros</h2>
+      <p class="body-16 text-color-white">
+        <span class="highlight">Arkytas</span> es una academia de robótica para niñas,
+        niños y jóvenes. A través del juego y proyectos prácticos que combinan mecánica,
+        electrónica y programación, aplicamos STEM y Design Thinking para que cada
+        estudiante piense, cree y experimente. Aprenden haciendo, se equivocan, mejoran
+        y vuelven a intentar: así desarrollan habilidades técnicas y socioemocionales
+        para resolver retos reales.
+      </p>
+      <p class="body-16 text-color-white">
+        Nuestra calidad y compromiso como academia se refleja en las
+        instituciones con las que trabajamos y hemos crecido en conjunto a
+        ellas.
+      </p>
+      <div class="clients">
+        <div class="col-width-25">
+          <div class="client">
+            <Image
+              src={Alcaparros}
+              alt="Logo Colegio Hacienda Los Alcaparros"
+              class="client_logo"
+            />
+          </div>
+        </div>
+
+        <div class="col-width-25">
+          <div class="client">
+            <Image src={Andino} alt="Logo Colegio Andino" class="client_logo" />
+          </div>
+        </div>
+        <div class="col-width-25">
+          <div class="client">
+            <Image
+              src={Colina}
+              alt="Logo Colegio La Colina"
+              class="client_logo"
+            />
+          </div>
+        </div>
+        <div class="col-width-25">
+          <div class="client">
+            <Image
+              src={GimnasioNorte}
+              alt="Logo Gimnasio del Norte"
+              class="client_logo"
+            />
+          </div>
+        </div>
+        <div class="col-width-25">
+          <div class="client">
+            <Image
+              src={SanFelipe}
+              alt="Logo Colegio San Felipe"
+              class="client_logo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .about {
+        background: var(--blue-dark);
+        padding: 60px 0 40px 0;
+
+        @media (min-width: 768px) {
+          padding: 120px 0 80px 0;
+        }
+      }
+
+      .body-16 {
+        margin-bottom: 15px;
+      }
+      .about .column {
+        @media (min-width: 768px) {
+          flex-direction: column;
+        }
+      }
+      .clients {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        margin-top: 50px;
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
+      }
+
+      .client {
+        background: white;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+      }
+
+      .client_logo {
+        object-fit: contain;
+        height: 82px;
+        width: auto;
+
+        @media (min-width: 768px) {
+          height: 90px;
+          width: 100%;
+        }
+      }
+    </style>
+  </div>
+</section>

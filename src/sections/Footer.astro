@@ -1,0 +1,73 @@
+---
+import YoutubeIcon from '../assets/youtube_icon.svg';
+import InstagramIcon from '../assets/instagram_icon.svg';
+
+const currentYear = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="container">
+    <p>© { currentYear} Arkytas. Todos los derechos reservados.</p>
+    <div class="social">
+      <a href="https://www.youtube.com/@ArkytasRobots" target="_blank" rel="noopener noreferrer" aria-label="Visitar canal de YouTube">
+        <YoutubeIcon class="icon" />
+      </a>
+      <a href="https://www.instagram.com/arkytasrobots" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de Instagram">
+        <InstagramIcon class="icon" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style scoped>
+  .footer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple-dark);
+    color: white;
+    font-family: var(--font-semibold);
+
+    @media (min-width: 768px) {
+      height: var(--footer-height-desktop);
+    }
+  }
+
+  .footer .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .footer .container .social {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  .footer .container .social .icon {
+    height: 35px;
+    width: auto;
+    fill:white;
+    transition: fill 0.3s;
+  }
+
+  .footer .container .social .icon:hover {
+    fill: var(--yellow-dark);
+  }
+</style>

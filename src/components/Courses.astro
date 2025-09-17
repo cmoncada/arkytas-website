@@ -1,0 +1,151 @@
+---
+import { Image } from "astro:assets";
+import Basic from "../assets/images/course_basic.webp";
+import Introduction from "../assets/images/course_introduction.webp";
+import Advanced from "../assets/images/course_advanced.webp";;
+---
+
+<section class="courses" id="cursos">
+  <div class="container">
+    <h2 class="title-40 text-dark-purple">Cursos</h2>
+    <div class="column">
+      <div class="col-width-33">
+        <div class="card">
+          <Image
+            src={Introduction}
+            class="course_image course_introduction"
+            loading="eager"
+            alt="imagen representativa del curso de introducción a la robótica para niños"
+          />
+          <div class="description">
+            <h3 class="title-21 text-dark-blue">Básico</h3>
+            <p class="body-14">
+              Dirigido a niños de 5 a 8 años, este curso introduce los conceptos
+              básicos de la robótica a través de actividades prácticas y
+              divertidas. Los estudiantes aprenderán a construir robots simples
+              utilizando kits educativos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-width-33">
+        <div class="card">
+          <Image
+            src={Basic}
+            class="course_image course_basic"
+            loading="eager"
+            alt="imagen representativa del curso básico de robótica para niños"
+          />
+          <div class="description">
+            <h3 class="title-21 text-dark-blue">Introducción</h3>
+            <p class="body-14">
+              Para niños de 9 a 12 años, este curso profundiza en los
+              fundamentos de la robótica y la programación. Los estudiantes
+              aprenderán a diseñar, construir y programar robots más complejos,
+              fomentando el pensamiento crítico y la resolución de problemas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-width-33">
+        <div class="card">
+          <Image
+            src={Advanced}
+            class="course_image course_advanced"
+            loading="eager"
+            alt="imagen representativa del curso avanzado de robótica para niños"
+          />
+          <div class="description">
+            <h3 class="title-21 text-dark-blue">Avanzado</h3>
+            <p class="body-14">
+              Diseñado para jóvenes de 13 a 17 años, este curso ofrece una
+              experiencia avanzada en robótica y programación. Los estudiantes
+              trabajarán en proyectos desafiantes que integran sensores, motores
+              y programación avanzada, preparándolos para futuras carreras en
+              STEM.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .courses {
+        padding: 80px 0;
+        background-color: var(--gray-light);
+      }
+
+      .courses .container {
+        flex-direction: column;
+      }
+
+      .column {
+        margin-top: 40px;
+        gap: 30px;
+      }
+
+      .card {
+        background: white;
+        min-height: 610px;
+      }
+
+      .description {
+        padding: 20px 25px 30px 25px;
+      }
+
+      .course_image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .course_introduction {
+         background: linear-gradient(
+          180deg,
+          var(--blue-dark) 60%,
+          white 60%
+        );
+      }
+
+      .course_introduction:hover {
+         background: linear-gradient(
+          180deg,
+          var(--blue-light) 60%,
+          white 60%
+        );
+      }
+
+      .course_basic {
+        background: linear-gradient(
+          180deg,
+          var(--green-dark) 60%,
+          white 60%
+        );
+      }
+
+      .course_basic:hover {
+        background: linear-gradient(
+          180deg,
+          var(--green-light) 60%,
+          white 60%
+        );
+      }
+
+      .course_advanced {
+        background: linear-gradient(
+          180deg,
+          var(--red-dark) 60%,
+          white 60%
+        );
+      }
+
+      .course_advanced:hover {
+        background: linear-gradient(
+          180deg,
+          var(--red-light) 60%,
+          white 60%
+        );
+      }
+    </style>
+  </div>
+</section>

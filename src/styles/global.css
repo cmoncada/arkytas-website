@@ -1,0 +1,310 @@
+:root {
+  --green-light: #c6c908;
+  --green-dark: #a5a50e;
+  --yellow-light: #fec93b;
+  --yellow-dark: #ff9d0b;
+  --red-light: #ff6a70;
+  --red-dark: #aa242b;
+  --blue-light: #5688ee;
+  --blue-dark: #263866;
+  --purple-light: #754799;
+  --purple-dark: #522671;
+  --gray-light: #dadae2;
+  --gray-medium: #26262a;
+  --gray-dark: ##101014;
+  --white: #ffffff;
+  --black: #000000;
+
+  --main-container-width: 1152px;
+  --main-container-padding: 24px;
+
+  --font-black: 'Delight-Black', sans-serif;
+  --font-bold: 'Delight-Black', sans-serif;
+  --font-semibold: 'Delight-SemiBold', sans-serif;
+  --font-regular: 'Delight-Regular', sans-serif;
+  --font-light: 'Delight-Light', sans-serif;
+  --font-thin: 'Delight-Thin', sans-serif;
+
+  --header-height: 64px;
+  --footer-height-desktop: 64px;
+  --footer-height-mobile: 80px;
+}
+
+@font-face {
+  font-family: 'Delight-Black';
+  src:
+    url(../assets/fonts/Delight-Black.woff2) format('woff2'),
+    url(../assets/fonts/Delight-Black.woff) format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Delight-Bold';
+  src:
+    url(../assets/fonts/Delight-Bold.woff2) format('woff2'),
+    url(../assets/fonts/Delight-Bold.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Delight-SemiBold';
+  src:
+    url(../assets/fonts/Delight-SemiBold.woff2) format('woff2'),
+    url(../assets/fonts/Delight-SemiBold.woff) format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Delight-Regular';
+  src:
+    url(../assets/fonts/Delight-Regular.woff2) format('woff2'),
+    url(../assets/fonts/Delight-Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Delight-Light';
+  src:
+    url(../assets/fonts/Delight-Light.woff2) format('woff2'),
+    url(../assets/fonts/Delight-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Delight-Thin';
+  src:
+    url(../assets/fonts/Delight-Thin.woff2) format('woff2'),
+    url(../assets/fonts/Delight-Thin.woff) format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-regular);
+  color: var(--gray-medium);
+}
+
+.container {
+  max-width: var(--main-container-width);
+  width: 100%;
+  padding: 0 var(--main-container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* --------------------- GRID SYSTEM ----------------- */
+.column {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.col-width-25 {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+}
+
+.col-width-30 {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+}
+
+.col-width-33 {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 33.33%;
+  }
+}
+
+.col-width-40 {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+}
+
+.col-width-60 {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+}
+
+.col-width-70 {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+}
+
+
+/* --------------------- TYPOGRAPHY ----------------- */
+.title-21 {
+  font-family: var(--font-bold);
+  font-size: 1.125em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+  }
+}
+
+.title-24 {
+  font-family: var(--font-bold);
+  font-size: 1.25em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+}
+
+.title-32 {
+  font-family: var(--font-bold);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+
+  @media (min-width: 768px) {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}
+
+.title-40 {
+  font-family: var(--font-bold);
+  font-size: 1.75em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+}
+
+.title-48 {
+  font-family: var(--font-bold);
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+}
+
+.body-14 {
+  font-family: var(--font-regular);
+  font-size: 1em;
+  line-height: 1.6;
+
+  @media (min-width: 768px) {
+    font-size: 0.875em;
+  }
+}
+
+.body-16 {
+  font-family: var(--font-regular);
+  font-size: 1.125em;
+  line-height: 1.6;
+
+  @media (min-width: 768px) {
+    font-size: 1em;
+  }
+}
+
+.body-18 {
+  font-family: var(--font-regular);
+  font-size: 1.25em;
+  line-height: 1.6;
+
+  @media (min-width: 768px) {
+    font-size: 1.125em;
+  }
+}
+
+.highlight {
+  font-family: var(--font-bold);
+}
+
+
+/* --------------------- FONT COLORS ----------------- */
+.text-dark-blue {
+  color: var(--blue-dark);
+}
+
+.text-dark-red {
+  color: var(--red-dark);
+}
+
+.text-dark-yellow {
+  color: var(--yellow-dark);
+}
+
+.text-color-white {
+  color: var(--white);
+}
+
+.text-color-black {
+  color: var(--black);
+} 
+
+.text-dark-purple {
+  color: var(--purple-dark);
+}
+
+/* --------------------- BUTTONS ----------------- */
+
+/* --------------------- LINKS ----------------- */
+.link-primary {
+  display: flex;
+  font-family: var(--font-semibold);
+  color: var(--red-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-top: 16px;
+}
+
+.link-primary:hover {
+  color: var(--red-light);
+  text-decoration: underline;
+}
