@@ -308,3 +308,17 @@ body {
   color: var(--red-light);
   text-decoration: underline;
 }
+
+.link-mail {
+  display: flex;
+  font-family: var(--font-semibold);
+  background-color: var(--red-dark);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-top: 16px;
+  justify-content: center;
+  font-size: 21px;
+}
